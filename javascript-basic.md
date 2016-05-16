@@ -116,12 +116,12 @@ p要素内の文字列を変更するには、innerHTML属性に変更したい�
 関数が作成出来たなら、p要素のonclick属性でその関数を実行するようにします。
 
 ```html
-<p id="p1" class="paragraph" onclick="changeParagraph()">変更前文字列</p>
-<button id="btn">変更</button>
+<p id="p1" class="paragraph">変更前文字列</p>
+<button id="btn" onclick="changeParagraph()">変更</button>
 <script>
 	function changeParagraph(){
 		var p1 = document.getElementById("p1");
-		p1.innerHTML = "変更後文字列";
+		p1.innerHTML = "へんこうごへんこうご";
 	}
 </script>
 ```
@@ -143,8 +143,8 @@ function sample(name, age) { // ←　name, ageの２つの引数が設定され
 関数に引数を定義し、呼び出し元（onclick属性の値）から変更する文字列を渡せるようにしましょう。
 
 ```html
-<p id="p1" class="paragraph"　onclick="changeParagraph('変更前')">変更前文字列</p>
-<button id="btn">変更</button>
+<p id="p1" class="paragraph" >変更前文字列</p>
+<button id="btn" onclick="changeParagraph('変更前')">変更</button>
 <script>
 	function changeParagraph(str){
 		var p1 = document.getElementById("p1");
@@ -224,3 +224,8 @@ var value = document.getElementById("text").value;
 			break;
 	}
 ```
+
+### ループ処理
+### 配列
+### オブジェクト
+
