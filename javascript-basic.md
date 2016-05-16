@@ -1,5 +1,6 @@
 ### 何故JavaScriptが必要なのか
 * HTML/cssで作成されたページの要素を動かすため
+
 ### JavaScriptの記入場所
 * &lt;script&gt;&lt;/script&gt;で囲った中に記述。
 
