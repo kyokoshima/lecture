@@ -172,11 +172,12 @@ DOM要素にイベントリスナと言うものを設定しておくと、登�
 ```html
 	<p id="p1" class="paragraph">変更前文字列</p>
 	<button id="btn">変更</button>
+
 	<script type="text/javascript">
 		var btn = document.getElementById("btn");
-		btn.addEventListener("click", function(str){
+		btn.addEventListener("click", function(){
 			var p1 = document.getElementById("p1");
-			p1.innerHTML = str;
+			p1.innerHTML = "変更したい文字列";
 		});
 	</script>
 ```
@@ -225,7 +226,15 @@ var value = document.getElementById("text").value;
 	}
 ```
 
+####演習D
+計算機を作ろう！
+
 ### ループ処理
+####while
+####for
+
 ### 配列
 ### オブジェクト
+### データ型
+
 
