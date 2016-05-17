@@ -14,8 +14,11 @@
 		生成ボタンのクリック処理を実装する
 		*/
 		document.getElementById("btnGenerate").addEventListener("click", function(){
-			console.log("1");
 			var display = document.getElementById("display");
+			var s = "文字列"
+			var n = 1000;
+			var f = 3.14159265358979;
+			console.log("文字：%s 数字：%d 浮動小数点：%f", "文字列", n, f);
 			removeSelect();
 			var select = createSelect();
 			document.getElementById("display").appendChild(select);
