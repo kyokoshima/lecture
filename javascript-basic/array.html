@@ -11,14 +11,19 @@
 	var btn = document.getElementById("btn");
 	btn.addEventListener("click", function(){
 
+		// var weeks = new Array();
 		var weeks = ["日曜日", "月曜日","火曜日","水曜日","木曜日","金曜日","土曜日"];
 		// var today = new Date();
 		// var week  = today.getDay();
 		// document.getElementById("result").value = weeks[week];
+		var index = document.getElementById("text1").value;
 
-		for (var i=0; i<=weeks.length; i++) {
+		alert(weeks[index]);
+/*
+		for (var i=0; i<weeks.length; i++) {
 			alert(weeks[i]);
 		}
+		*/
 	});
 </script>
 </body>
