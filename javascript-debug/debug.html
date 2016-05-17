@@ -14,6 +14,7 @@
 		生成ボタンのクリック処理を実装する
 		*/
 		document.getElementById("btnGenerate").addEventListener("click", function(){
+			console.log("1");
 			var display = document.getElementById("display");
 			removeSelect();
 			var select = createSelect();
@@ -29,6 +30,7 @@
 		プルダウンボックスを削除する
 		*/
 		function removeSelect() {
+			console.log("2");
 			var select = document.getElementById("prefectures");
 			if (select) {
 				select.parentNode.removeChild(select);
@@ -38,6 +40,7 @@
 		プルダウンボックスを作成する
 		*/
 		function createSelect(){
+			console.log("3");
 			var select = document.createElement("select");
 			select.setAttribute("id", "prefectures");
 			createOptions(select);

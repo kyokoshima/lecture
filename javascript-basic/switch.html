@@ -1,0 +1,28 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<input type="text" value="1" id="text1">
+	<input type="text" value="" id="result">
+	<button id="btn">更新</button>
+<script type="text/javascript">
+	var btn = document.getElementById("btn");
+	btn.addEventListener("click", function(){
+		var text1 = document.getElementById("text1").value;
+		var result = document.getElementById("result");
+		switch(text1) {
+			case "0":
+				alert("0です！");
+				break;
+			case "1":
+				alert("1です！");
+				break;
+			default:
+				alert("なにかです！");
+		}
+	});
+</script>
+</body>
+</html>
