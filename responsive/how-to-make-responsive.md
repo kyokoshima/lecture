@@ -91,8 +91,14 @@ hgroup h2, h4, h5, h6 { font-size: 16px; line-height: 1.5; }
 ##### グラデーション
 ##### hover
 ### メディアクエリ
+#### ブレイクポイント
+768px, 1024px
+#### グリッドデザイン
+#### nav, footerの固定960px
+### フルードグリッド
+固定値から％へ
+
 
 
 ## ツール
 [Window Resizer](https://chrome.google.com/webstore/detail/window-resizer/kkelicaakdanhinjdeammmilcgefonfh)
-
