@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="UTF-8">
+	<title>計算機</title>
+	<style>
+		#calc {
+			background-color: gray;
+			width: 180px;
+			height: 260px;
+		}
+		.btn {
+			width: 40px;
+			height: 40px;
+			float: left;
+			background-color: white;
+			color: black;
+			margin: 1px;
+			text-align: center;
+			font-size: large;
+			line-height: 2em;
+			cursor: pointer;
+		}
+		.num {
+			background-color: white;
+			color: black;
+		}
+		.ope {
+			background-color: orange;
+			color: white;
+		}
+		.on {
+			background-color: gray;
+			color: black;
+		}
+		.clear {
+			clear: both;
+		}
+		#result {
+			height: 40px;
+			width: 100%;
+			background-color: black;
+			color: white;
+			text-align: right;
+			line-height: 2em;
+			font-size: large;
+			position: relative;
+		}
+		#mark {
+			color: white;
+			position: absolute;
+		}
+	</style>
+</head>
+<body>
+	<div id="calc">
+		<div id="result">
+			<div id="mark"></div>
+			<div id="number"></div>
+		</div>
+		<div class="btn">C</div>
+		<div class="btn"></div>
+		<div class="btn"></div>
+		<div class="btn ope" id="waru">➗</div>
+		<div class="btn clear num">7</div>
+		<div class="btn num">8</div>
+		<div class="btn num">9</div>
+		<div class="btn ope" id="kakeru">✖</div>
+		<div class="btn clear num">4</div>
+		<div class="btn num">5</div>
+		<div class="btn num">6</div>
+		<div class="btn ope" id="minus">➖</div>
+		<div class="btn clear num">1</div>
+		<div class="btn num">2</div>
+		<div class="btn num">3</div>
+		<div class="btn ope" id="plus">➕</div>
+		<div class="btn clear num">0</div>
+		<div class="btn"></div>
+		<div class="btn"></div>
+		<div class="btn ope" id="equal">=</div>
+	</div>
+	<script src="../jquery-2.2.4.js"></script>
+	<script src="calc.js"></script>
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		#calc {
+			background-color: gray;
+			width: 120px;
+			height: 160px;
+			padding: 3px;
+		}
+		.btn {
+			width: 20px;
+			height: 20px;
+			background-color: black;
+			color: white;
+			float: left;
+			margin: 3px;
+			text-align: center;
+			cursor: pointer;
+			border-radius: 5px;
+		}
+		.clear {
+			clear: both;
+		}
+
+		#result {
+			width: 90px;
+			height: 20px;
+			background-color: white;
+			margin: 3px;
+		}
+		.ope {
+			background-color: orange;
+			color: white;
+		}
+		.on {
+			background-color: white;
+			color: black;
+		}
+		.selected {
+			border: 2px solid red;
+		}
+	</style>
+</head>
+<body>
+	<div id="calc">
+		<div id="result"></div>
+		<div class="btn ctrl">C</div>
+		<div class="btn"></div>
+		<div class="btn"></div>
+		<div class="btn ope">/</div>
+		<div class="btn num clear">7</div>
+		<div class="btn num">8</div>
+		<div class="btn num">9</div>
+		<div class="btn ope">*</div>
+		<div class="btn num clear">4</div>
+		<div class="btn num">5</div>
+		<div class="btn num">6</div>
+		<div class="btn ope">-</div>
+		<div class="btn num clear">1</div>
+		<div class="btn num">2</div>
+		<div class="btn num">3</div>
+		<div class="btn ope">+</div>
+		<div class="btn num clear">0</div>
+		<div class="btn"></div>
+		<div class="btn"></div>
+		<div class="btn ope">=</div>
+	</div>
+	<script src="../jquery-2.2.4.js"></script>
+	<script src="calc.js"></script>
+</body>
+</html>

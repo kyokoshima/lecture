@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		#container {
+			width: 200px;
+			height: 200px;
+			background-color: red;
+		}
+		#child {
+			width: 150px;
+			height: 150px;
+			background-color: yellow;
+		}
+		#grandchild {
+			width: 100px;
+			height: 100px;
+			background-color: green;
+		}
+		#span-child	{
+			background-color: blue;
+		}
+		.div {
+			width: 100px;
+			height: 100px;
+			background-color: pink;
+			border: 1px solid red;
+		}
+		.on {
+			background-color: red;
+			border: 3px solid pink;
+		}
+		#div5 {
+			width: 1px;
+			height: 1px;
+			background-color: lime;
+			border: 1px solid green;
+		}
+	</style>
+</head>
+<body>
+	<input type="text" name="text-name" value="Hello jQuery!" 
+			id="text-id" class="text-class">
+	<input type="radio" value="ラジオボタン">ラジオ</input>
+	<button type="button" id="getById">IDで取得</button>
+	<button type="button" id="getByClass">classで取得</button>
+	<button type="button" id="getByTag">tagで取得</button>
+	<button type="button" id="getByName">nameで取得</button>
+	<div id="container">
+		<div id="child">
+			<div id="grandchild">
+				grandchild
+			</div>
+		</div>
+		<input type="text" value="text-child" 
+				id="text-child">
+		<span id="span-child">span-child</span>
+	</div>
+	<hr>
+	<div id="event" class="div"></div>
+	<hr>
+	<input type="text" id="text1">
+	<div id="div1" class="div"></div>
+	<div id="div2" class="div"></div>
+	<div id="div3" class="div"></div>
+	<div id="div5"></div>
+	<div id="div6" class="div"></div>
+	<script src="../jquery-2.2.4.js"></script>
+	<!-- <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script> -->
+	<script src="script.js"></script>
+</body>
+</html>

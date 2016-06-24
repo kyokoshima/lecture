@@ -102,9 +102,19 @@ mysql>
 mysql> create database blog character set 'utf8';
 ```
 
+#### データベースの確認
+```bash
+mysql> show databases;
+```
+
 #### データベースの選択
 ```bash
 mysql> use blog
+```
+
+#### テーブルの確認
+```bash
+mysql> show tables;
 ```
 
 #### テーブルの作成

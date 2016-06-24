@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>Access</title>
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+  <!-- Optional theme -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+
+  <!-- Latest compiled and minified JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+	 <div id="header-inner">
+		<h1>SUMUii</h1>
+		<nav>
+			<ul>
+				<li><a href="index.html">HOME</a></li>
+				<li><a href="list.html">Room</a></li>
+				<li><a href="book.html">Booking</a></li>
+				<li><a href="access.html">Access</a></li>
+			</ul>
+		</nav>
+		</div>
+	</header>
+  <div id="contents">
+    <h2>Book</h2>
+    <article id="inquiry">
+      <form action="thanks.html" class="form-horizontal">
+        <div class="form-group">
+          <label for="" class="control-label col-sm-2">名前</label>
+          <div class="col-sm-10">
+            <input type="text" name="name" class="form-control" placeholder="名前を入力してください">
+          </div>  
+        </div>
+
+        <table>
+          <tr>
+            <td>名前</td>
+            <td><input type="text" name="name"></td>
+          </tr>
+          <tr>
+            <td>E-Mail</td>
+            <td><input type="email" name="email"></td>
+          </tr>
+          <tr>
+            <td>お問い合わせ内容</td>
+            <td><textarea name="contents" id="" cols="30" rows="10"></textarea></td>
+          </tr>
+          <tr>
+            <td colspan="2" class="buttons">
+              <input type="submit" value="送信">
+            </td>
+          </tr>
+        </table>
+      </form>
+    </article>
+  </div>
+  <footer>
+    <small>2016 © Reina All rights reserved.</small>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		#div3, .div{
+			background-color: yellow;
+			width: 50px;
+			height: 50px;
+			margin: 1px;
+		}
+		.on {
+			border: 2px solid red;
+		}
+	</style>
+</head>
+<body>
+	<input type="text" id="text1" class="text" 
+			name="text1" value="Hello jQuery!">
+	<input type="radio" id="radio1" value="0">
+	<button type="button" id="getById">IDで取得</button>
+	<button type="button" id="getByClass">Classで取得</button>
+	<button type="button" id="getByTag">Tag名で取得</button>
+	<button type="button" id="getByName">名前で取得</button>
+	<hr>
+	<div id="div1">
+		<div id="div1-1">
+			<div id="div1-1-1">子供div1-1-1</div>
+			<div id="div1-1-2">子供div1-1-2</div>
+		</div>
+	</div>
+	<div id="div2">
+		<div id="div2-1">
+			<div id="div2-1-1">子供div2-1-1</div>
+			<div id="div2-1-2">子供div2-1-2</div>
+		</div>
+	</div>
+	<hr>
+	<div id="div3"></div>
+	<button type="button" id="getChild">子孫を取得</button>
+	<hr>
+	<input type="text" id="text2">
+	<div id="div4" class="div"></div>
+	<div id="div5" class="div"></div>
+	<hr>
+	<div id="div6">
+		<div id="div6-1" class="div"></div>
+	</div>
+	<hr>
+	<div id="div7" class="div">div7</div>
+	<hr>
+	<div id="div8" class="div"></div>
+	
+	<script src="../jquery-2.2.4.js"></script>
+	<!-- <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script> -->
+	<script src="script.js"></script>
+</body>
+</html>

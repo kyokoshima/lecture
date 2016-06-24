@@ -1,0 +1,25 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+
+</head>
+<body>
+	<input type="text" id="text" />
+	<button id="btn">チェック</button>
+	<script>
+		document.getElementById("btn")
+			.addEventListener("click", function() {
+				var val = document.getElementById("text").value;
+				switch(parseInt(val)) {
+					case 7:
+						alert('Bingo!');
+						break;
+					default:
+						alert(val + "です");
+						break;
+				}
+			});
+	</script>
+</body>
+</html>

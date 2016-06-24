@@ -7,24 +7,16 @@
 	<input type="text" value="1" id="text1">
 	<input type="text" value="" id="result">
 	<button id="btn">更新</button>
-<script type="text/javascript">
-	var btn = document.getElementById("btn");
-	btn.addEventListener("click", function(){
+	<button id="confirm">確認</button>
+	<button id="prompt">入力</button>
+	<button id="back">戻る</button>
+	<button id="jump">ジャンプ</button>
+	<button id="forward">進む</button>
+	<button id="replace">置換</button>
+	<button id="i">インラインフレーム切り替え</button>
+	<iframe src="back.html" name="ifr"></iframe>
 
-		// var weeks = new Array();
-		var weeks = ["日曜日", "月曜日","火曜日","水曜日","木曜日","金曜日","土曜日"];
-		// var today = new Date();
-		// var week  = today.getDay();
-		// document.getElementById("result").value = weeks[week];
-		var index = document.getElementById("text1").value;
-
-		alert(weeks[index]);
-/*
-		for (var i=0; i<weeks.length; i++) {
-			alert(weeks[i]);
-		}
-		*/
-	});
+<script type="text/javascript" src="array.js">
 </script>
 </body>
 </html>

@@ -1,0 +1,161 @@
+/*
+#EBEDC8 白っぽいやつ
+#9AB5C1 薄い青っぽいやつ
+#74698C 紫っぽいやつ
+#C1867B 茶色
+*/
+@import url(https://fonts.googleapis.com/css?family=Averia+Sans+Libre:400,700);
+@import url(https://fonts.googleapis.com/css?family=Delius|Delius+Swash+Caps|Coming+Soon|Averia+Sans+Libre);
+
+* {
+	margin: 0;
+	padding: 0;
+}
+body {
+	background-image: url('background.gif');
+}
+footer small {
+	font-size: 8px;
+}
+header, article, footer {
+	margin-left: auto;
+	margin-right: auto;
+}
+article, footer {
+
+}
+header {
+	font-family: 'Averia Sans Libre', cursive;
+	font-weight: bold;
+	text-shadow: 1px 1px 1px ivory;
+	width: 100%;
+	background-color: #203744;
+	color: #EBEDC8;
+	box-shadow: 1px 1px 1px #gray;
+}
+header h1 {
+	/*margin-left: auto;*/
+	margin-right: auto;
+	float: left;
+}
+#header-inner {
+	width: 800px;
+	margin: 0 auto;
+	overflow: hidden;
+}
+
+header nav {
+	float: right;
+	padding-top: .5em;
+}
+header nav ul{
+	list-style-type: none;
+	margin: 0;
+	padding-left: 0;
+	font-size: 0;
+}
+header nav ul li {
+	display: inline-block;
+	border-right: 1px solid #74698C;
+	text-align: center;
+	font-size: 16px;
+	padding: 0 5px;
+}
+header nav ul li:first-child {
+	border-left: 1px solid #74698C;
+}
+header nav ul li a {
+	text-decoration: none;
+	color: #EBEDC8;
+}
+header nav ul li a:hover {
+	text-decoration: underline;
+}
+article {
+	margin-top: 40px;
+	margin-bottom: 40px;
+	width: 800px;
+	background-color: #EBEDC8;
+	border-radius: 10px;
+	padding: 30px 0;
+	clear: both;
+	overflow: hidden;
+}
+article h1 {
+	margin: 20px;
+}
+article p {
+	margin: 0 20px;
+}
+article img {
+	float: right;
+	max-width: 300px;
+	margin: 0 20px;
+}
+#top {
+	clear: both;
+	height: 400px;
+	overflow: hidden;
+	position: relative;
+	background-image: url(images/top.jpg);
+	background-size: cover;
+	background-position: 0 -50px;
+}
+
+#top h1 {
+	text-align: center;
+	margin-top: 13%;
+	font-family: 'Averia Sans Libre', cursive;
+	font-weight: bold;
+	text-shadow: 1px 1px 1px ivory;
+	font-size: 72px;
+}
+
+#article-1 h2 {
+	margin: 0 20px;
+}
+#contents {
+	width: 800px;
+	margin: 24px auto;
+}
+
+#contents h2 {
+	font-family: 'Averia Sans Libre', cursive;
+}
+
+#access table caption {
+	text-align: left;
+	margin-left: 24px;
+	margin-bottom: 24px;
+}
+#access table caption h2 {
+	border-left: 10px solid #d1a25c;
+	display: inline-block;
+	padding-left: 15px;
+}
+
+#access table th {
+	width: 20%;
+}
+#access table tr th,
+#access table tr td {
+	border-bottom: 1px solid #C1867B;
+}
+
+#inquiry form table {
+	margin-left: 30px;
+}
+
+#inquiry form button {
+
+}
+
+#inquiry form table .buttons {
+	text-align: center;;
+}
+
+footer {
+	width: 800px;
+	font-family: 'Averia Sans Libre', cursive;
+	text-align: center;
+}

@@ -7,22 +7,13 @@
 	<input type="text" value="1" id="text1">
 	<input type="text" value="" id="result">
 	<button id="btn">更新</button>
-<script type="text/javascript">
-	var btn = document.getElementById("btn");
-	btn.addEventListener("click", function(){
-		var text1 = document.getElementById("text1").value;
-		var result = document.getElementById("result");
-		switch(text1) {
-			case "0":
-				alert("0です！");
-				break;
-			case "1":
-				alert("1です！");
-				break;
-			default:
-				alert("なにかです！");
-		}
-	});
-</script>
+	<button id="confirm">確認</button>
+	<button id="prompt">文字入力</button>
+	<button id="jump">URLへジャンプ</button>
+	<button id="back">戻る</button>
+	<button id="forward">進む</button>
+	<button id="changeIfr">インラインフレーム変更</button>
+	<iframe src="back.html" name="ifr"></iframe>
+<script type="text/javascript" src="script.js"></script>
 </body>
 </html>

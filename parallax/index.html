@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+	body {
+	width  : 100%;
+	height : 100%;
+}
+
+body {
+	margin      : 0px;
+	min-width   : 1080px;
+	padding     : 0px;
+	font-family : "Caecilia-Light", 'Helvetica Neue', Arial, Helvetica, sans-serif;
+	overflow-x  : hidden;
+}
+	#content {
+		position: fixed;
+		width: 100%;
+		height: 100%;
+		top: 0px;
+		left: 0px;
+	}
+	section {
+	min-height : 500px;
+	min-height : 100%;
+	width      : 100%;
+	position   : absolute;
+	overflow   : hidden;
+	visibility : hidden;
+}
+
+section .story {
+	position      : relative;
+	z-index       : 1;
+	width         : 500px;
+	padding-right : 450px;
+	margin        : 20px auto 0 auto;
+}
+/* default section show / hide animations */
+section.start {
+	top : 100%;
+}
+
+section.focus, section.to {
+	bottom : 0%;
+}
+
+section.end {
+	bottom : 100%;
+}
+
+/* default background image animation */
+
+section .bg {
+	position : absolute;
+	left     : 0px;
+	top      : 0%;
+}
+
+section .bg.start {
+	top : -50%;
+}
+
+section .bg, section .bg.focus, section .bg.to {
+	top : 0;
+}
+
+section .bg.end {
+	top : 100%;
+}
+
+	#story-1 {
+		background-color: red;
+		width: 100%
+		height: 100%
+	}
+	#story-2 {
+		background-color: blue;
+		width: 100%
+		height: 100%
+	}
+	#story-3 {
+		background-color: green;
+		width: 100%
+		height: 100%
+	}
+	#story-3 .bg.start {
+		top: -50px;
+	}
+	#story-3 .bg.to {
+		top: -100px;
+	}
+		#story-3 .bg.end {
+		top: -300px;
+	}
+		#story-3 .bg.start {
+		top: -0px;
+	}
+	#story-3 .bg.to {
+		top: -50px;
+	}
+		#story-3 .bg.end {
+		top: -100px;
+	}
+	
+	#story-4 {
+		background-color: pink;
+		width: 100%
+		height: 100%
+	}
+	#story-5 {
+		background-color: yellow;
+		width: 100%
+		height: 100%
+	}
+	</style>
+</head>
+<body>
+	<div id="mock-scroller"></div>
+	<ul id="nav"></ul>
+	
+	<div id="content">
+		<section id="story-1">
+			<img src="../html/images/shirohige.jpg" alt="" class="bg animate" anim-detached="true">
+			<div class="story">
+				<h2>最初のボックス</h2>
+			</div>
+		</section>
+		<section id="story-2">
+			<img src="../html/images/kinkakuji.jpg" alt="" class="bg animate" anim-detached="true">
+			<div class="story">
+				<h2>二番目のボックス</h2>
+			</div>
+		</section>
+		
+		<section id="story-3">
+			<img src="../html/images/shirohige.jpg" alt="" class="bg animate" anim-detached="true">
+			<div class="story">
+				<h2>三番目のボックス</h2>
+			</div>
+		</section>
+		<section id="story-4">
+			<div class="story">
+				<h2>四番目のボックス</h2>
+			</div>
+		</section>
+		<section id="story-5">
+			<div class="story">
+				<h2>碁盤目のボックス</h2>
+			</div>
+		</section>
+	</div>
+	<script src="../jquery/jquery-2.2.4.js"></script>
+	<!-- <script src="http://razorfish.github.io/Parallax-JS/Parallax/js/jquery-1.7.1.js"></script> -->
+	<script src="kinetics.js"></script>
+	<script src="backgrounds.js"></script>
+	<script src="parallax.js"></script>
+</body>
+</html>
