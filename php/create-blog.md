@@ -15,6 +15,75 @@
 - 編集用ページ  
 既にある記事を編集するページ
 
+### 開発環境の準備
+#### vagrantの仮想マシンの準備
+CentOSを使用する為にboxをインポートする。
+
+まずは、vagrantを起動する為の作業ディレクトリを決める。
+vagrantを使用する場合は*常に*そこで作業する。
+
+```bash
+$ mkdir -p ~/Documents/vagrant
+$ cd ~/Documents/vagrant
+```
+[公式提供](https://atlas.hashicorp.com/boxes/search)されているboxの場合は下記のように初期設定する。
+
+下記は「bento/centos-6.7」を使用する場合
+```bash
+$ vagrant init bento/centos-6.7
+```
+
+公式のboxでないboxの場合は下記のように名前を付けて起動する事もできる。
+[vagrantbox.es](http://www.vagrantbox.es/)に色々な種類のboxがあるので、例えばそれを使用する場合は
+
+```bash
+$ vagrant init centos6.7 https://dl.dropboxusercontent.com/u/51478659/vagrant/morungos-centos67.box
+```
+
+#### vagrantを起動
+
+```bash
+$ vagrant up
+```
+
+#### vagrant仮想マシンにログイン
+```bash
+$ vagrant ssh
+```
+
+#### vagrant仮想マシンをシャットダウン
+```bash
+$ vagrant halt
+```
+
+#### phpの開発をする際の設定
+
+vagrant仮想マシンの設定は全てVagrantfileと言うファイルに記載する。
+
+##### 仮想マシンの中のWebサーバーを参照する設定
+下記設定で、http://192.168.33.10でWebサーバーが参照できるようになる。
+
+```ruby
+Vagrant.configure(2) do |config|
+	:
+	config.vm.network "private_network", ip: "192.168.33.10"
+	:
+end
+```
+
+##### ホストとゲストマシンでの共有フォルダの設定
+ホスト（vagrantを起動した側のマシン）で作業をして、それをゲスト(
+vagrantで起動したマシン)に反映する場合に、共有フォルダを設定すると便利。
+
+```ruby
+Vagrant.configure(2) do |config|
+	:
+	config.vm.synced_folder "~/Documents/php", "/php", mount_options: ['dmode=777','fmode=755']
+	:
+end
+```
+
+
 ### PHPとWebサーバーとデータベースの準備
 #### Apacheインストール
 
@@ -170,3 +239,44 @@ mysql> update [テーブル名] set [列名] = [値] (where [条件])
 ```sql
 mysql> delete from [テーブル名] (where [条件])
 ```
+
+##### カラムの追加
+```sql
+alter table [テーブル名] add [カラム名] [カラム定義] (after [後に挿入したいカラム名]) 
+```
+
+```sql
+alter table posts add image_name text after contents;
+alter table posts add image_path text after image_name;
+```
+
+##### カラムの削除
+```sql
+alter table [テーブル名] drop [カラム名]
+```
+
+
+#### PHPからMySQLにアクセスする設定
+##### PDOのインストール
+
+```bash
+$ sudo yum install -y php-mysql
+```
+
+##### PDOの使い方
+
+* PDOオブジェクトの作成
+```php
+<?php
+	$db = new PDO('mysql:host=[ホスト名];dbname=[データベース名]', '[ユーザー名]', '[パスワード]');
+?>
+```
+
+* データベースのエラー時に例外を発生させる設定
+```php
+<?php
+	$db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+?>
+```
+
+#### ファイルアップロード
