@@ -1,7 +1,8 @@
 # Rubyの環境インストール
 ## vagrantの共有フォルダ追加
 
-今までphpやwordpressの授業で使用していたvagrant仮想マシンに共有フォルダの設定を追加する。
+今までphpやwordpressの授業で使用していたvagrant仮想マシンに共有フォルダの設定を追加します。
+Vagrantfileに下記の設定を追記します。
 
 ```ruby
 config.vm.synced_folder "~/Documents/acthouse/task/ror", "/ror", mount_options: ['dmode=777','fmode=755']
