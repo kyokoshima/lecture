@@ -13,6 +13,13 @@ synched_folderの引数は第一引数が自分のパソコンのフォルダ、
 
 ## rbenvのインストール
 vagrantの設定をしたら、vagrant仮想マシン内にrbenvと言うrubyのバージョンを管理できるソフトを入れます。
+なので、vagrant仮想マシンにログインしてください。
+
+### gitインストール
+gitが必要なのでgitをまず入れます。
+```bash
+sudo yum install -y git
+```
 
 [rbenv](https://github.com/rbenv/rbenv)
 
