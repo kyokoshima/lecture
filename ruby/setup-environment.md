@@ -27,7 +27,7 @@ sudo yum install -y git
 
 + rbenvをgithubからclone
 ```bash
-git clone https://github.com/rbenv/rbenv.git ~/.
+git clone https://github.com/rbenv/rbenv.git ~/.rbenv
 ```
 
 - 環境変数追加
@@ -52,16 +52,18 @@ $ type rbenv
 git clone https://github.com/rbenv/ruby-build.git ~/.rbenv/plugins/ruby-build
 ```
 
+- OSライブラリインストール
+Rubyをビルドするのに幾つか必要なライブラリがあるので、先にインストールしておきます。
+```bash
+sudo yum install -y gcc bzip2 openssl-devel libyaml-devel libffi-devel readline-devel zlib-devel gdbm-devel ncurses-devel
+```
+
 - ruby最新版インストール
 ```bash
 rbenv install 2.3.1
 ```
 
-もしインストールが失敗するようならば、下記コマンドでライブラリ等が不足している可能性があるので下記コマンド実行後に再度試してみます。
 
-```bash
-sudo yum install -y gcc bzip2 openssl-devel libyaml-devel libffi-devel readline-devel zlib-devel gdbm-devel ncurses-devel
-```
 
 - bundlerとrailsインストール
 ```bash
