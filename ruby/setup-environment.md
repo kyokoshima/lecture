@@ -63,7 +63,10 @@ sudo yum install -y gcc bzip2 openssl-devel libyaml-devel libffi-devel readline-
 rbenv install 2.3.1
 ```
 
-
+- デフォルトで使用するRubyのバージョンをセット
+```bash
+rbenv global 2.3.1
+```
 
 - bundlerとrailsインストール
 ```bash
